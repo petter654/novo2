@@ -1,0 +1,11 @@
+streamlit
+pandas
+sentence-transformers
+scikit-learn
+joblib
+unidecode
+nltk
+pandera
+pyyaml
+openpyxl
+xlsxwriter

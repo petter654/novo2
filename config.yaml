@@ -1,0 +1,31 @@
+# Caminhos para os arquivos de dados
+data_paths:
+  pdm: 'bases/base_pdm.XLSX'
+  familias: 'bases/familias.xlsx'
+  feedback: 'bases/Base_Treinamento_AMPLIADA_FEEDBACK.xlsx'
+
+# Caminho para salvar os relatórios e arquivos de feedback
+reports_path: 'reports'
+
+# Diretório para armazenar os arquivos de cache (modelos, embeddings)
+cache_dir: 'cache'
+
+# Nomes dos arquivos de cache. O diretório será adicionado pelo script.
+cache_filenames:
+  - 'embeddings_materiais.pkl'
+  - 'nn_macro_model.pkl'
+  - 'nn_micro_models.pkl'
+
+# Configurações do modelo de Machine Learning
+model:
+  name: 'paraphrase-multilingual-MiniLM-L12-v2'
+  k_neighbors: 10
+  confidence_threshold: 0.70
+  metric: 'cosine'
+
+# Configurações para a limpeza de texto
+cleaning:
+  # Palavras a serem removidas além das stopwords padrão do português
+  stop_words: ['tipo', 'modelo', 'uso', 'material', 'linha', 'produto', 'descricao', 'item', 'peca']
+  # Se true, remove unidades de medida comuns (mm, kg, etc.)
+  remove_units: true
